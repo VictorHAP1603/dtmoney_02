@@ -1,37 +1,31 @@
 import { Summary } from "../../components/Summary";
+import { useTransactions } from "../../contexts/TransactionsContext";
 import { SearchForm } from "./components/SearchForm";
 import { PriceHighlight, TransactionsContainer, TransactionsTable } from "./style";
 
+
 export function Transactions() {
+  const { transactions } = useTransactions()
+
   return (
     <TransactionsContainer>
       <Summary />
-
       <SearchForm />
 
       <TransactionsTable>
         <tbody>
-          <tr>
-            <td width="50%">Aluguel do apartamento</td>
-            <td>
-              <PriceHighlight type="outcome">
-                - R$ 1.200,00
-              </PriceHighlight>
-            </td>
-            <td>Casa</td>
-            <td>27/03/2022</td>
-          </tr>
-
-          <tr>
-            <td width="50%">Computador</td>
-            <td>
-              <PriceHighlight type="income">
-                R$ 5.000,00
-              </PriceHighlight>
-            </td>
-            <td>Venda</td>
-            <td>15/03/2022</td>
-          </tr>
+          {transactions.length > 0 && transactions.map(transaction => (
+            <tr key={transaction.id}>
+              <td width="50%">{transaction.description}</td>
+              <td>
+                <PriceHighlight type={transaction.type}>
+                  {transaction.price}
+                </PriceHighlight>
+              </td>
+              <td>{transaction.category}</td>
+              <td>{transaction.createdAt}</td>
+            </tr>
+          ))}
         </tbody>
       </TransactionsTable>
 
