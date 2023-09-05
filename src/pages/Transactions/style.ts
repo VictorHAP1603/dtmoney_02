@@ -4,7 +4,7 @@ export const TransactionsContainer = styled.main`
   max-width: 1120px;
   margin: 0 auto;
 
-  padding: 0rem 1.5rem;
+  padding: 0rem 1.5rem 1.5rem 1.5rem;
 `
 
 export const TransactionsTable = styled.table`
@@ -37,5 +37,6 @@ interface PriceHighlightProps {
 }
 
 export const PriceHighlight = styled.span<PriceHighlightProps>`
-  color: ${({ type, theme }) => (type === 'income' ? theme['green-300'] : theme['red-300'])};
+  color: ${({ type, theme }) =>
+    type === 'income' ? theme['green-300'] : theme['red-300']};
 `

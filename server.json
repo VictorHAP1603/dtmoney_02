@@ -31,6 +31,54 @@
       "category": "Salário",
       "price": 4000,
       "createdAt": "2023-08-05T22:45:38.207Z"
+    },
+    {
+      "category": "asdsad",
+      "description": "asddas",
+      "price": 123312,
+      "type": "income",
+      "createdAt": "2023-09-05T14:32:11.609Z",
+      "id": 5
+    },
+    {
+      "category": "abv",
+      "description": "Desenvolvimento de app",
+      "price": 10000,
+      "type": "income",
+      "createdAt": "2023-09-05T14:36:26.483Z",
+      "id": 6
+    },
+    {
+      "category": "das21",
+      "description": "dsad",
+      "price": 213,
+      "type": "income",
+      "createdAt": "2023-09-05T14:37:47.780Z",
+      "id": 7
+    },
+    {
+      "category": "Casa",
+      "description": "Casa",
+      "price": 100000,
+      "type": "outcome",
+      "createdAt": "2023-09-05T14:45:09.314Z",
+      "id": 8
+    },
+    {
+      "category": "Alimentação",
+      "description": "Iogurte",
+      "price": 50,
+      "type": "outcome",
+      "createdAt": "2023-09-05T14:47:01.290Z",
+      "id": 9
+    },
+    {
+      "category": "sadasd",
+      "description": "adsdas",
+      "price": 123213,
+      "type": "income",
+      "createdAt": "2023-09-05T18:15:22.723Z",
+      "id": 10
     }
   ]
 }
